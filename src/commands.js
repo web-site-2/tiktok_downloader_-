@@ -57,7 +57,8 @@ export function registerCommands(bot) {
         format: "best[ext=mp4]/best",
         mergeOutputFormat: "mp4",
         maxFilesize: "45M",
-        output: filePath,
+userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+output: filePath,
         socketTimeout: 30,
         retries: 2,
       }, { timeout: 180000 })
