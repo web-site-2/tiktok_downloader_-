@@ -40,7 +40,7 @@ function runYtDlp(url, filePath) {
       url
     ];
 
-   const python = process.env.PYTHON_EXECUTABLE || "python3";
+  const python = path.resolve(".venv/bin/python");
 const child = spawn(python, args, { stdio: ["ignore", "ignore", "pipe"] });
     let stderr = "";
     child.stderr.setEncoding("utf8");
