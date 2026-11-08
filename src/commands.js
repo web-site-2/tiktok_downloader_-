@@ -40,7 +40,8 @@ function runYtDlp(url, filePath) {
       url
     ];
 
-    const child = spawn("python3", args, { stdio: ["ignore", "ignore", "pipe"] });
+   const python = process.env.PYTHON_EXECUTABLE || "python3";
+const child = spawn(python, args, { stdio: ["ignore", "ignore", "pipe"] });
     let stderr = "";
     child.stderr.setEncoding("utf8");
     child.stderr.on("data", chunk => {
